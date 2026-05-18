@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B3A66" />
+  <title>אינטרנט סיבים בגולן | בדיקת זמינות עם טלרן תקשורת</title>
+  <meta name="description" content="בדקו זמינות אינטרנט סיבים ביישובי הגולן עם טלרן תקשורת. מתאים לבתים, עסקים, עובדים מהבית וצימרים. השאירו פרטים ונציג יחזור אליכם." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="#" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="he_IL" />
+  <meta property="og:title" content="אינטרנט סיבים בגולן | טלרן תקשורת" />
+  <meta property="og:description" content="בדקו זמינות אינטרנט סיבים ביישובי הגולן. בתים, עסקים, צימרים ועובדים מהבית." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1517999144091-3d9dca6d1e43?w=1200&q=80" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0B3A66',
+            secondary: '#00B8D9',
+            accent: '#7CFFCB',
+            bg: '#F6FAFC',
+            ink: '#102033',
+            dark: '#061A2B',
+            success: '#14B86A',
+          },
+          fontFamily: {
+            sans: ['Heebo', 'Assistant', 'Arial', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 10px 40px -10px rgba(11, 58, 102, 0.18)',
+            glow: '0 0 40px rgba(124, 255, 203, 0.35)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "אינטרנט סיבים אופטיים",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "טלרן תקשורת",
+      "telephone": ["*3054", "*2063"],
+      "areaServed": {
+        "@type": "Place",
+        "name": "רמת הגולן"
+      }
+    },
+    "areaServed": "רמת הגולן",
+    "description": "בדיקת זמינות אינטרנט סיבים אופטיים לבתים, עסקים, קיבוצים ויישובים באזור הגולן."
+  }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Heebo', 'Assistant', Arial, sans-serif;
+      background: #F6FAFC;
+      color: #102033;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Gradient backgrounds */
+    .bg-hero {
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(0,184,217,0.35), transparent 60%),
+        radial-gradient(900px 500px at 10% 10%, rgba(124,255,203,0.18), transparent 60%),
+        linear-gradient(135deg, #061A2B 0%, #0B3A66 55%, #0B3A66 100%);
+    }
+    .bg-cta {
+      background:
+        radial-gradient(800px 400px at 20% 20%, rgba(124,255,203,0.25), transparent 60%),
+        radial-gradient(700px 400px at 80% 80%, rgba(0,184,217,0.35), transparent 60%),
+        linear-gradient(135deg, #061A2B, #0B3A66 70%);
+    }
+    .bg-mesh {
+      background:
+        radial-gradient(600px 300px at 50% 0%, rgba(0,184,217,0.08), transparent 60%),
+        radial-gradient(500px 300px at 100% 100%, rgba(11,58,102,0.06), transparent 60%);
+    }
+
+    /* Glass card */
+    .glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .glass-light {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(11, 58, 102, 0.08);
+    }
+
+    /* Fiber line animation */
+    .fiber-line {
+      position: absolute;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #7CFFCB, #00B8D9, transparent);
+      filter: blur(0.5px);
+      box-shadow: 0 0 12px rgba(124, 255, 203, 0.7);
+      animation: fiber 6s ease-in-out infinite;
+    }
+    @keyframes fiber {
+      0%, 100% { opacity: 0.4; transform: translateX(0); }
+      50% { opacity: 1; transform: translateX(10px); }
+    }
+
+    /* Reveal on scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-stagger > * {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal-stagger.in > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.in > *:nth-child(2) { transition-delay: 0.12s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.in > *:nth-child(3) { transition-delay: 0.19s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.in > *:nth-child(4) { transition-delay: 0.26s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.in > *:nth-child(5) { transition-delay: 0.33s; opacity: 1; transform: translateY(0); }
+    .reveal-stagger.in > *:nth-child(6) { transition-delay: 0.40s; opacity: 1; transform: translateY(0); }
+
+    /* CTA pulse */
+    .cta-pulse {
+      position: relative;
+    }
+    .cta-pulse::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow: 0 0 0 0 rgba(0, 184, 217, 0.55);
+      animation: pulse 2.4s infinite;
+      pointer-events: none;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 184, 217, 0.55); }
+      70% { box-shadow: 0 0 0 18px rgba(0, 184, 217, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 184, 217, 0); }
+    }
+
+    /* Floating particles */
+    .particle {
+      position: absolute;
+      border-radius: 9999px;
+      background: rgba(124, 255, 203, 0.5);
+      filter: blur(1px);
+      animation: float 8s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0); opacity: 0.5; }
+      50% { transform: translateY(-20px) translateX(10px); opacity: 1; }
+    }
+
+    /* Sticky header transition */
+    #site-header.scrolled {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(11, 58, 102, 0.08);
+      box-shadow: 0 6px 20px -10px rgba(11, 58, 102, 0.15);
+    }
+    #site-header.scrolled .logo-text { color: #0B3A66; }
+    #site-header.scrolled .nav-link { color: #102033; }
+    #site-header.scrolled .header-cta {
+      background: #0B3A66;
+      color: #fff;
+    }
+
+    /* FAQ */
+    details.faq-item summary { list-style: none; cursor: pointer; }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item[open] .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform 0.3s ease; }
+    details.faq-item[open] .faq-answer {
+      animation: faqOpen 0.4s ease;
+    }
+    @keyframes faqOpen {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Map dots glow */
+    .map-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 9999px;
+      background: #7CFFCB;
+      box-shadow: 0 0 16px rgba(124, 255, 203, 0.85);
+      animation: dotPulse 2.5s ease-in-out infinite;
+    }
+    @keyframes dotPulse {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
+      50% { transform: scale(1.25); opacity: 1; }
+    }
+
+    /* Inputs */
+    .input-field {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(11, 58, 102, 0.15);
+      background: #fff;
+      color: #102033;
+      font-size: 15px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .input-field:focus {
+      outline: none;
+      border-color: #00B8D9;
+      box-shadow: 0 0 0 4px rgba(0, 184, 217, 0.15);
+    }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #00B8D9 0%, #0B3A66 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 10px 30px -10px rgba(0, 184, 217, 0.6);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 40px -10px rgba(0, 184, 217, 0.7); }
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transition: background 0.2s;
+    }
+    .btn-ghost:hover { background: rgba(255, 255, 255, 0.16); }
+
+    /* Mobile sticky CTA */
+    .mobile-cta-bar {
+      transform: translateY(120%);
+      transition: transform 0.4s ease;
+    }
+    .mobile-cta-bar.show { transform: translateY(0); }
+
+    /* Accessibility */
+    :focus-visible {
+      outline: 3px solid #00B8D9;
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal-stagger > * { transition: none; opacity: 1; transform: none; }
+      .fiber-line, .particle, .map-dot, .cta-pulse::after { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body class="bg-bg text-ink">
+
+  <!-- Skip to content (a11y) -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:right-3 focus:z-50 focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">דלגו לתוכן הראשי</a>
+
+  <!-- ============== HEADER ============== -->
+  <header id="site-header" class="fixed top-0 inset-x-0 z-40 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5" aria-label="טלרן תקשורת — דף הבית">
+        <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-secondary to-primary text-white shadow-glow">
+          <i data-lucide="cable" class="w-5 h-5"></i>
+        </span>
+        <span class="logo-text text-white font-extrabold text-lg sm:text-xl">טלרן תקשורת</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-7" aria-label="ניווט ראשי">
+        <a href="#benefits" class="nav-link text-white/90 hover:text-accent font-medium">יתרונות</a>
+        <a href="#how" class="nav-link text-white/90 hover:text-accent font-medium">איך זה עובד</a>
+        <a href="#local" class="nav-link text-white/90 hover:text-accent font-medium">אזורי שירות</a>
+        <a href="#faq" class="nav-link text-white/90 hover:text-accent font-medium">שאלות נפוצות</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="#lead-form" class="header-cta hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-accent text-dark font-bold text-sm hover:brightness-95 transition">
+          <i data-lucide="search" class="w-4 h-4"></i>
+          בדיקת זמינות
+        </a>
+        <button id="menu-btn" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl bg-white/10 text-white border border-white/20" aria-label="פתח תפריט" aria-controls="mobile-menu" aria-expanded="false">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10 bg-dark/95 backdrop-blur">
+      <nav class="px-4 py-4 flex flex-col gap-1" aria-label="ניווט נייד">
+        <a href="#benefits" class="px-3 py-3 rounded-lg text-white hover:bg-white/10">יתרונות</a>
+        <a href="#how" class="px-3 py-3 rounded-lg text-white hover:bg-white/10">איך זה עובד</a>
+        <a href="#local" class="px-3 py-3 rounded-lg text-white hover:bg-white/10">אזורי שירות</a>
+        <a href="#faq" class="px-3 py-3 rounded-lg text-white hover:bg-white/10">שאלות נפוצות</a>
+        <a href="#lead-form" class="mt-2 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-accent text-dark font-bold">
+          <i data-lucide="search" class="w-4 h-4"></i>
+          בדיקת זמינות
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+  <!-- ============== HERO ============== -->
+  <section class="relative bg-hero text-white pt-28 pb-20 lg:pt-36 lg:pb-28 overflow-hidden">
+    <!-- Hero image overlay -->
+    <div class="absolute inset-0 opacity-25 mix-blend-luminosity pointer-events-none">
+      <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1920&q=70" alt="" aria-hidden="true" class="w-full h-full object-cover" loading="eager" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-t from-dark/80 via-transparent to-transparent pointer-events-none"></div>
+
+    <!-- Fiber lines -->
+    <div class="fiber-line" style="top: 30%; left: 0; width: 60%;"></div>
+    <div class="fiber-line" style="top: 65%; left: 20%; width: 50%; animation-delay: 2s;"></div>
+    <div class="fiber-line" style="top: 80%; left: 10%; width: 40%; animation-delay: 4s;"></div>
+
+    <!-- Floating particles -->
+    <span class="particle" style="top: 15%; left: 8%; width: 8px; height: 8px; animation-delay: 0s;"></span>
+    <span class="particle" style="top: 40%; left: 25%; width: 6px; height: 6px; animation-delay: 2s;"></span>
+    <span class="particle" style="top: 25%; right: 15%; width: 10px; height: 10px; animation-delay: 1s;"></span>
+    <span class="particle" style="top: 70%; right: 30%; width: 5px; height: 5px; animation-delay: 3s;"></span>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 reveal">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass text-sm text-accent font-semibold mb-5">
+          <i data-lucide="map-pin" class="w-4 h-4"></i>
+          אזור הגולן — בדיקת זמינות לפי כתובת
+        </span>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-5">
+          שיעור פרטי<br>
+          <span class="bg-gradient-to-l from-accent via-secondary to-accent bg-clip-text text-transparent">אופק ומשה</span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-white/85 max-w-2xl mb-4 leading-relaxed">
+          בדקו אם ניתן לחבר את הבית, העסק או הצימר שלכם לתשתית סיבים של טלרן תקשורת באזור הגולן.
+        </p>
+        <p class="text-base text-white/70 max-w-2xl mb-8 leading-relaxed">
+          עובדים מהבית, מעלים קבצים, צופים בסטרימינג, מנהלים עסק או פשוט רוצים אינטרנט שלא נתקע ברגע הכי חשוב? השאירו פרטים ונבדוק עבורכם זמינות לפי יישוב וכתובת.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 mb-8">
+          <a href="#lead-form" class="btn-primary cta-pulse">
+            <i data-lucide="search-check" class="w-5 h-5"></i>
+            בדיקת זמינות עכשיו
+          </a>
+          <a href="tel:*3054" class="btn-ghost">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+            השאירו פרטים ונחזור אליכם
+          </a>
+        </div>
+
+        <div class="flex flex-wrap gap-2.5">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full glass text-sm text-white/90">
+            <i data-lucide="map-pinned" class="w-4 h-4 text-accent"></i> בדיקה לפי כתובת
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full glass text-sm text-white/90">
+            <i data-lucide="home" class="w-4 h-4 text-accent"></i> מתאים לבתים ולעסקים
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full glass text-sm text-white/90">
+            <i data-lucide="trees" class="w-4 h-4 text-accent"></i> שירות לקיבוצים ויישובים
+          </span>
+        </div>
+      </div>
+
+      <!-- Hero form card -->
+      <div class="lg:col-span-5 reveal">
+        <div class="glass-light rounded-2xl shadow-soft p-6 lg:p-7 relative">
+          <div class="absolute -top-3 -right-3 bg-accent text-dark text-xs font-bold px-3 py-1.5 rounded-full shadow">
+            בדיקה לא מחייבת
+          </div>
+          <h2 class="text-xl font-extrabold text-primary mb-1">בדיקת זמינות מהירה</h2>
+          <p class="text-sm text-ink/70 mb-5">השאירו פרטים ונציג יחזור אליכם.</p>
+
+          <form class="grid gap-3" data-form="hero" novalidate>
+            <div>
+              <label class="text-sm font-medium text-ink/80" for="hero-name">שם מלא</label>
+              <input id="hero-name" name="name" type="text" required class="input-field mt-1" placeholder="לדוגמה: ישראל ישראלי" autocomplete="name" />
+            </div>
+            <div>
+              <label class="text-sm font-medium text-ink/80" for="hero-phone">טלפון</label>
+              <input id="hero-phone" name="phone" type="tel" required pattern="^0\d{8,9}$" class="input-field mt-1" placeholder="050-0000000" autocomplete="tel" inputmode="tel" />
+            </div>
+            <div>
+              <label class="text-sm font-medium text-ink/80" for="hero-town">יישוב בגולן</label>
+              <input id="hero-town" name="town" type="text" required class="input-field mt-1" placeholder="לדוגמה: קצרין" />
+            </div>
+            <button type="submit" class="btn-primary w-full mt-2">
+              <i data-lucide="send" class="w-5 h-5"></i>
+              בדקו לי זמינות
+            </button>
+            <p class="text-xs text-ink/60 text-center mt-1">
+              הזמינות משתנה לפי יישוב ותשתית קיימת.
+            </p>
+          </form>
+
+          <div data-success="hero" class="hidden text-center py-6">
+            <div class="inline-flex w-14 h-14 items-center justify-center rounded-full bg-success/10 text-success mb-3">
+              <i data-lucide="check" class="w-7 h-7"></i>
+            </div>
+            <h3 class="font-bold text-lg text-primary mb-1">הפנייה התקבלה</h3>
+            <p class="text-sm text-ink/70">נציג יחזור אליכם לבדיקת זמינות הסיבים באזורכם.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== PAIN POINTS ============== -->
+  <section class="py-20 lg:py-24 bg-mesh">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto reveal">
+        <span class="inline-block text-secondary font-bold text-sm uppercase tracking-wider mb-3">הבעיה</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary mb-4 leading-tight">
+          כשהאינטרנט לא יציב, כל הבית מרגיש את זה
+        </h2>
+        <p class="text-lg text-ink/70 leading-relaxed">
+          ביישובים רבים, במיוחד באזורים מרוחקים, חיבור האינטרנט משפיע ישירות על העבודה, הלימודים, העסק והחיים בבית. סיבים אופטיים יכולים לשפר משמעותית את חוויית השימוש — בכפוף לזמינות תשתית באזורכם.
+        </p>
+      </div>
+
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 reveal-stagger">
+        <article class="bg-white rounded-2xl p-6 shadow-soft border border-primary/5 hover:border-secondary/30 transition">
+          <div class="inline-flex w-12 h-12 items-center justify-center rounded-xl bg-secondary/10 text-secondary mb-4">
+            <i data-lucide="video-off" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-ink mb-2">זום נתקע באמצע פגישה</h3>
+          <p class="text-sm text-ink/70 leading-relaxed">עבודה מהבית דורשת חיבור יציב, במיוחד כשיש שיחות וידאו, העלאות קבצים ומספר מכשירים במקביל.</p>
+        </article>
+
+        <article class="bg-white rounded-2xl p-6 shadow-soft border border-primary/5 hover:border-secondary/30 transition">
+          <div class="inline-flex w-12 h-12 items-center justify-center rounded-xl bg-secondary/10 text-secondary mb-4">
+            <i data-lucide="tv" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-ink mb-2">הילדים בסטרימינג ואתם בלי רוחב פס</h3>
+          <p class="text-sm text-ink/70 leading-relaxed">כשכל הבית מחובר יחד, אינטרנט חלש מורגש מיד.</p>
+        </article>
+
+        <article class="bg-white rounded-2xl p-6 shadow-soft border border-primary/5 hover:border-secondary/30 transition">
+          <div class="inline-flex w-12 h-12 items-center justify-center rounded-xl bg-secondary/10 text-secondary mb-4">
+            <i data-lucide="store" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-ink mb-2">עסק מקומי לא יכול להרשות ניתוקים</h3>
+          <p class="text-sm text-ink/70 leading-relaxed">קליניקה, משרד, צימר או חנות צריכים חיבור יציב לשגרה עסקית רציפה.</p>
+        </article>
+
+        <article class="bg-white rounded-2xl p-6 shadow-soft border border-primary/5 hover:border-secondary/30 transition">
+          <div class="inline-flex w-12 h-12 items-center justify-center rounded-xl bg-secondary/10 text-secondary mb-4">
+            <i data-lucide="mountain" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-bold text-lg text-ink mb-2">ביישובים מרוחקים הבחירה לא פשוטה</h3>
+          <p class="text-sm text-ink/70 leading-relaxed">בדיוק לכן חשוב לבצע בדיקת זמינות לפי כתובת ולא להסתמך על ניחושים.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SOLUTION ============== -->
+  <section class="py-20 lg:py-24 bg-white relative overflow-hidden">
+    <div class="absolute top-1/2 -left-32 w-96 h-96 rounded-full bg-secondary/5 blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <span class="inline-block text-secondary font-bold text-sm uppercase tracking-wider mb-3">הפתרון</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary mb-5 leading-tight">
+            סיבים אופטיים שמביאים את הגולן קדימה
+          </h2>
+          <p class="text-lg text-ink/75 leading-relaxed mb-4">
+            תשתית סיבים מאפשרת חוויית גלישה יציבה ומהירה יותר לעומת פתרונות ישנים, ומתאימה במיוחד לבתים ולעסקים שבהם יש שימוש אינטנסיבי באינטרנט.
+          </p>
+          <p class="text-base text-ink/65 leading-relaxed mb-7">
+            בטלרן תקשורת ניתן לבדוק זמינות חיבור ביישובים וקיבוצים, ולקבל מענה לפי הכתובת והצורך בפועל.
+          </p>
+
+          <ul class="space-y-3 mb-7">
+            <li class="flex items-start gap-3">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-success/15 text-success inline-flex items-center justify-center mt-0.5">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </span>
+              <span class="text-ink font-medium">חיבור יציב יותר לשימוש יומיומי</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-success/15 text-success inline-flex items-center justify-center mt-0.5">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </span>
+              <span class="text-ink font-medium">מתאים לריבוי מכשירים בבית</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-success/15 text-success inline-flex items-center justify-center mt-0.5">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </span>
+              <span class="text-ink font-medium">פתרון רלוונטי לעבודה מהבית ולעסקים</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-success/15 text-success inline-flex items-center justify-center mt-0.5">
+                <i data-lucide="check" class="w-4 h-4"></i>
+              </span>
+              <span class="text-ink font-medium">בדיקת זמינות ממוקדת לפי יישוב וכתובת</span>
+            </li>
+          </ul>
+
+          <p class="text-sm text-ink/55 border-r-4 border-secondary/40 pr-4 italic">
+            החיבור בפועל כפוף לזמינות תשתית, תנאי השטח ובדיקת היתכנות.
+          </p>
+        </div>
+
+        <div class="reveal relative">
+          <div class="relative rounded-3xl overflow-hidden shadow-soft">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" alt="כבלי סיבים אופטיים זוהרים" class="w-full h-[420px] object-cover" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent"></div>
+            <div class="absolute bottom-6 right-6 left-6">
+              <div class="glass rounded-2xl p-4 text-white">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-dark">
+                    <i data-lucide="zap" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="font-bold">תשתית סיבים אופטיים</p>
+                    <p class="text-sm text-white/80">חיבור יציב גם ביישובים מרוחקים</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== BENEFITS / WHO ============== -->
+  <section id="benefits" class="py-20 lg:py-24 bg-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto reveal">
+        <span class="inline-block text-secondary font-bold text-sm uppercase tracking-wider mb-3">למי זה מתאים</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary mb-4 leading-tight">
+          פתרון שמתאים לחיים האמיתיים בגולן
+        </h2>
+        <p class="text-lg text-ink/70">
+          סיבים אופטיים רלוונטיים כמעט לכל שימוש יומיומי — מבית פרטי ועד עסק קטן ופעיל.
+        </p>
+      </div>
+
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
+        <article class="bg-white rounded-2xl p-7 shadow-soft border border-primary/5 hover:-translate-y-1 transition-transform">
+          <div class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-gradient-to-br from-secondary to-primary text-white mb-5 shadow-glow">
+            <i data-lucide="users" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-extrabold text-xl text-primary mb-2">משפחות</h3>
+          <p class="text-ink/70 leading-relaxed">טלוויזיות חכמות, מחשבים, טלפונים, טאבלטים וקונסולות — כולם צריכים חיבור יציב.</p>
+        </article>
+
+        <article class="bg-white rounded-2xl p-7 shadow-soft border border-primary/5 hover:-translate-y-1 transition-transform">
+          <div class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-gradient-to-br from-secondary to-primary text-white mb-5 shadow-glow">
+            <i data-lucide="laptop" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-extrabold text-xl text-primary mb-2">עובדים מהבית</h3>
+          <p class="text-ink/70 leading-relaxed">שיחות וידאו, מערכות ענן, שליחת קבצים ועבודה רציפה ללא עצבים מיותרים.</p>
+        </article>
+
+        <article class="bg-white rounded-2xl p-7 shadow-soft border border-primary/5 hover:-translate-y-1 transition-transform">
+          <div class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-gradient-to-br from-secondary to-primary text-white mb-5 shadow-glow">
+            <i data-lucide="briefcase" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-extrabold text-xl text-primary mb-2">בעלי עסקים</h3>
+          <p class="text-ink/70 leading-relaxed">ניהול יומן, סליקה, מערכות CRM, מצלמות, שירות לקוחות ודואר אלקטרוני.</p>
+        </article>
+
+        <article class="bg-white rounded-2xl p-7 shadow-soft border border-primary/5 hover:-translate-y-1 transition-transform">
+          <div class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-gradient-to-br from-secondary to-primary text-white mb-5 shadow-glow">
+            <i data-lucide="bed-double" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-extrabold text-xl text-primary mb-2">צימרים ואירוח</h3>
+          <p class="text-ink/70 leading-relaxed">אורחים מצפים ל-WiFi איכותי כחלק מחוויית האירוח.</p>
+        </article>
+
+        <article class="bg-white rounded-2xl p-7 shadow-soft border border-primary/5 hover:-translate-y-1 transition-transform">
+          <div class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-gradient-to-br from-secondary to-primary text-white mb-5 shadow-glow">
+            <i data-lucide="graduation-cap" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-extrabold text-xl text-primary mb-2">סטודנטים ותלמידים</h3>
+          <p class="text-ink/70 leading-relaxed">למידה מרחוק, שיעורים מוקלטים, עבודות וקבצים כבדים.</p>
+        </article>
+
+        <article class="bg-white rounded-2xl p-7 shadow-soft border border-primary/5 hover:-translate-y-1 transition-transform">
+          <div class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-gradient-to-br from-secondary to-primary text-white mb-5 shadow-glow">
+            <i data-lucide="shield-check" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-extrabold text-xl text-primary mb-2">בתים חכמים ואבטחה</h3>
+          <p class="text-ink/70 leading-relaxed">מצלמות, מערכות בית חכם וגיבויים בענן צריכים חיבור יציב.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== LOCAL GOLAN ============== -->
+  <section id="local" class="py-20 lg:py-24 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <span class="inline-block text-secondary font-bold text-sm uppercase tracking-wider mb-3">מקומי</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary mb-5 leading-tight">
+            אינטרנט סיבים שמותאם לחיים בגולן
+          </h2>
+          <p class="text-lg text-ink/75 leading-relaxed mb-4">
+            הגולן הוא לא עוד אזור עירוני צפוף. המרחקים, סוגי התשתיות והפריסה בין היישובים מחייבים בדיקה נקודתית.
+          </p>
+          <p class="text-base text-ink/65 leading-relaxed mb-7">
+            בגולן לא כל יישוב, הרחבה או שכונה נמצאים באותה רמת זמינות תשתית. לכן הדף לא מבטיח חיבור אוטומטי — אלא מציע בדיקה אמיתית לפי הכתובת שלכם. השאירו פרטים, ונבדוק האם ניתן לקדם חיבור סיבים באזורכם.
+          </p>
+
+          <div class="bg-bg rounded-2xl p-5 border border-primary/10 mb-5">
+            <p class="text-sm text-ink/80 mb-2 font-semibold">דוגמאות לאזורי שירות:</p>
+            <p class="text-base text-ink/70 leading-relaxed">
+              קצרין, מושבים, קיבוצים ויישובים נוספים באזור הגולן — בכפוף לבדיקה.
+            </p>
+            <p class="text-xs text-ink/50 mt-3 italic">
+              הרשימה להמחשה בלבד ואינה מהווה התחייבות לזמינות.
+            </p>
+          </div>
+
+          <a href="#lead-form" class="btn-primary">
+            <i data-lucide="search" class="w-5 h-5"></i>
+            בדיקת זמינות לפי יישוב, רחוב וכתובת
+          </a>
+        </div>
+
+        <!-- Stylized Golan map -->
+        <div class="reveal relative">
+          <div class="relative aspect-square max-w-lg mx-auto">
+            <div class="absolute inset-0 rounded-[40%_60%_55%_45%/45%_55%_45%_55%] bg-gradient-to-br from-primary via-primary/90 to-dark shadow-soft overflow-hidden">
+              <div class="absolute inset-0 opacity-30">
+                <svg viewBox="0 0 100 100" class="w-full h-full" aria-hidden="true">
+                  <defs>
+                    <pattern id="grid" width="6" height="6" patternUnits="userSpaceOnUse">
+                      <path d="M 6 0 L 0 0 0 6" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.3"/>
+                    </pattern>
+                  </defs>
+                  <rect width="100" height="100" fill="url(#grid)" />
+                </svg>
+              </div>
+
+              <!-- Glow dots = settlements -->
+              <span class="map-dot absolute" style="top: 22%; right: 30%;"></span>
+              <span class="map-dot absolute" style="top: 35%; right: 50%; animation-delay: 0.6s;"></span>
+              <span class="map-dot absolute" style="top: 45%; right: 25%; animation-delay: 1s;"></span>
+              <span class="map-dot absolute" style="top: 55%; right: 60%; animation-delay: 1.4s;"></span>
+              <span class="map-dot absolute" style="top: 65%; right: 40%; animation-delay: 0.3s;"></span>
+              <span class="map-dot absolute" style="top: 72%; right: 55%; animation-delay: 1.8s;"></span>
+              <span class="map-dot absolute" style="top: 30%; right: 70%; animation-delay: 0.9s;"></span>
+
+              <!-- Fiber connection lines -->
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <g stroke="rgba(124,255,203,0.5)" stroke-width="0.3" fill="none">
+                  <line x1="70" y1="22" x2="50" y2="35" />
+                  <line x1="50" y1="35" x2="75" y2="45" />
+                  <line x1="75" y1="45" x2="40" y2="55" />
+                  <line x1="40" y1="55" x2="60" y2="65" />
+                  <line x1="60" y1="65" x2="45" y2="72" />
+                  <line x1="50" y1="35" x2="30" y2="30" />
+                </g>
+              </svg>
+
+              <div class="absolute bottom-6 right-6 left-6 text-center">
+                <p class="text-white font-bold text-lg">בדיקת זמינות</p>
+                <p class="text-white/70 text-sm">לפי יישוב, רחוב וכתובת</p>
+              </div>
+            </div>
+
+            <!-- Decorative compass -->
+            <div class="absolute -top-4 -left-4 w-16 h-16 rounded-full glass-light shadow-soft flex items-center justify-center text-primary">
+              <i data-lucide="compass" class="w-8 h-8"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== HOW IT WORKS ============== -->
+  <section id="how" class="py-20 lg:py-24 bg-mesh">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto reveal">
+        <span class="inline-block text-secondary font-bold text-sm uppercase tracking-wider mb-3">איך זה עובד</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary mb-4 leading-tight">
+          4 צעדים פשוטים לבדיקה
+        </h2>
+        <p class="text-lg text-ink/70">תהליך פשוט וברור, בלי הפתעות ובלי התחייבויות.</p>
+      </div>
+
+      <div class="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 reveal-stagger relative">
+        <!-- Timeline line for desktop -->
+        <div class="hidden lg:block absolute top-10 right-[12.5%] left-[12.5%] h-0.5 bg-gradient-to-l from-secondary/40 via-secondary to-secondary/40 z-0"></div>
+
+        <article class="relative bg-white rounded-2xl p-6 shadow-soft border border-primary/5 z-10">
+          <div class="absolute -top-5 right-6 w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-primary text-white font-bold text-lg flex items-center justify-center shadow-glow">1</div>
+          <div class="pt-3">
+            <div class="inline-flex w-11 h-11 items-center justify-center rounded-xl bg-secondary/10 text-secondary mb-3">
+              <i data-lucide="user-plus" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-lg text-primary mb-2">משאירים פרטים</h3>
+            <p class="text-sm text-ink/70 leading-relaxed">ספרו לנו איפה אתם גרים ומה סוג השימוש שלכם.</p>
+          </div>
+        </article>
+
+        <article class="relative bg-white rounded-2xl p-6 shadow-soft border border-primary/5 z-10">
+          <div class="absolute -top-5 right-6 w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-primary text-white font-bold text-lg flex items-center justify-center shadow-glow">2</div>
+          <div class="pt-3">
+            <div class="inline-flex w-11 h-11 items-center justify-center rounded-xl bg-secondary/10 text-secondary mb-3">
+              <i data-lucide="search-check" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-lg text-primary mb-2">בודקים זמינות</h3>
+            <p class="text-sm text-ink/70 leading-relaxed">נבדוק האם קיימת אפשרות חיבור לפי יישוב, כתובת ותשתית.</p>
+          </div>
+        </article>
+
+        <article class="relative bg-white rounded-2xl p-6 shadow-soft border border-primary/5 z-10">
+          <div class="absolute -top-5 right-6 w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-primary text-white font-bold text-lg flex items-center justify-center shadow-glow">3</div>
+          <div class="pt-3">
+            <div class="inline-flex w-11 h-11 items-center justify-center rounded-xl bg-secondary/10 text-secondary mb-3">
+              <i data-lucide="package" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-lg text-primary mb-2">מקבלים פרטי חבילה</h3>
+            <p class="text-sm text-ink/70 leading-relaxed">נציג יחזור אליכם עם האפשרויות הרלוונטיות.</p>
+          </div>
+        </article>
+
+        <article class="relative bg-white rounded-2xl p-6 shadow-soft border border-primary/5 z-10">
+          <div class="absolute -top-5 right-6 w-12 h-12 rounded-full bg-gradient-to-br from-secondary to-primary text-white font-bold text-lg flex items-center justify-center shadow-glow">4</div>
+          <div class="pt-3">
+            <div class="inline-flex w-11 h-11 items-center justify-center rounded-xl bg-secondary/10 text-secondary mb-3">
+              <i data-lucide="plug-zap" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-lg text-primary mb-2">מתקדמים לחיבור</h3>
+            <p class="text-sm text-ink/70 leading-relaxed">במידה ויש זמינות, ניתן לתאם המשך תהליך מול הנציג.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== MAIN LEAD FORM ============== -->
+  <section id="lead-form" class="py-20 lg:py-24 bg-gradient-to-b from-bg to-white relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-72 h-72 bg-secondary/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 right-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-5 gap-8 items-start">
+        <div class="lg:col-span-2 reveal">
+          <span class="inline-block text-secondary font-bold text-sm uppercase tracking-wider mb-3">בדיקת זמינות</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-primary mb-4 leading-tight">
+            בדקו עכשיו אם יש סיבים בכתובת שלכם
+          </h2>
+          <p class="text-lg text-ink/70 leading-relaxed mb-6">
+            מלאו פרטים ונציג יחזור אליכם לבדיקת זמינות באזור הגולן.
+          </p>
+
+          <ul class="space-y-3 text-ink/75">
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-success"></i>
+              <span>הבדיקה אינה מחייבת</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-success"></i>
+              <span>תשובה לפי הכתובת שלכם בלבד</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-success"></i>
+              <span>מענה גם לבתים, צימרים ועסקים</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3 reveal">
+          <div class="bg-white rounded-3xl shadow-soft p-6 sm:p-8 border border-primary/5">
+            <form class="grid sm:grid-cols-2 gap-4" data-form="main" novalidate>
+              <div>
+                <label class="text-sm font-semibold text-ink/85" for="main-name">שם מלא <span class="text-secondary">*</span></label>
+                <input id="main-name" name="name" type="text" required class="input-field mt-1.5" autocomplete="name" />
+              </div>
+              <div>
+                <label class="text-sm font-semibold text-ink/85" for="main-phone">טלפון <span class="text-secondary">*</span></label>
+                <input id="main-phone" name="phone" type="tel" required pattern="^0\d{8,9}$" class="input-field mt-1.5" placeholder="050-0000000" autocomplete="tel" inputmode="tel" />
+              </div>
+              <div>
+                <label class="text-sm font-semibold text-ink/85" for="main-town">יישוב בגולן <span class="text-secondary">*</span></label>
+                <input id="main-town" name="town" type="text" required class="input-field mt-1.5" placeholder="לדוגמה: קצרין" />
+              </div>
+              <div>
+                <label class="text-sm font-semibold text-ink/85" for="main-address">כתובת / הרחבה / שכונה</label>
+                <input id="main-address" name="address" type="text" class="input-field mt-1.5" placeholder="רחוב ומספר" />
+              </div>
+              <div>
+                <label class="text-sm font-semibold text-ink/85" for="main-existing">האם יש אינטרנט בבית?</label>
+                <select id="main-existing" name="existing" class="input-field mt-1.5">
+                  <option value="">בחרו תשובה</option>
+                  <option value="yes">כן</option>
+                  <option value="no">לא</option>
+                </select>
+              </div>
+              <div>
+                <label class="text-sm font-semibold text-ink/85" for="main-usage">סוג שימוש עיקרי</label>
+                <select id="main-usage" name="usage" class="input-field mt-1.5">
+                  <option value="">בחרו אפשרות</option>
+                  <option value="home">בית פרטי</option>
+                  <option value="wfh">עבודה מהבית</option>
+                  <option value="business">עסק</option>
+                  <option value="zimmer">צימר / אירוח</option>
+                  <option value="other">אחר</option>
+                </select>
+              </div>
+              <div class="sm:col-span-2">
+                <label class="text-sm font-semibold text-ink/85" for="main-notes">הערות נוספות</label>
+                <textarea id="main-notes" name="notes" rows="3" class="input-field mt-1.5 resize-none" placeholder="כל פרט שיעזור לנו לבדוק במדויק"></textarea>
+              </div>
+              <label class="sm:col-span-2 flex items-start gap-2.5 text-sm text-ink/80 cursor-pointer">
+                <input type="checkbox" required class="mt-1 w-4 h-4 accent-secondary" name="consent" />
+                <span>אני מאשר/ת יצירת קשר לצורך בדיקת זמינות והצעת שירות.</span>
+              </label>
+              <div class="sm:col-span-2">
+                <button type="submit" class="btn-primary w-full">
+                  <i data-lucide="send" class="w-5 h-5"></i>
+                  שלחו לבדיקה
+                </button>
+                <p class="text-xs text-ink/55 text-center mt-3">
+                  הבדיקה אינה מחייבת. הזמינות משתנה לפי אזור ותשתית.
+                </p>
+              </div>
+            </form>
+
+            <div data-success="main" class="hidden text-center py-10">
+              <div class="inline-flex w-16 h-16 items-center justify-center rounded-full bg-success/10 text-success mb-4">
+                <i data-lucide="check" class="w-8 h-8"></i>
+              </div>
+              <h3 class="font-extrabold text-2xl text-primary mb-2">הפנייה התקבלה</h3>
+              <p class="text-ink/70">נציג יחזור אליכם לבדיקת זמינות הסיבים באזורכם.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TRUST ============== -->
+  <section class="py-20 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto reveal">
+        <span class="inline-block text-secondary font-bold text-sm uppercase tracking-wider mb-3">למה טלרן</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary mb-4 leading-tight">
+          טלרן תקשורת — פתרונות תקשורת ליישובים וקיבוצים
+        </h2>
+        <p class="text-lg text-ink/70 leading-relaxed">
+          טלרן תקשורת פועלת בתחום התקשורת והתשתיות ומציעה שירות אינטרנט סיבים אופטיים לקיבוצים ויישובים. השאירו פרטים לבדיקת זמינות באזורכם.
+        </p>
+      </div>
+
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5 reveal-stagger">
+        <article class="bg-gradient-to-br from-bg to-white rounded-2xl p-6 border border-primary/10 text-center">
+          <div class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-primary text-white mb-4">
+            <i data-lucide="network" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-bold text-lg text-primary mb-2">התמחות בתשתיות</h3>
+          <p class="text-sm text-ink/70">פעילות בתחום התקשורת והסיבים האופטיים.</p>
+        </article>
+
+        <article class="bg-gradient-to-br from-bg to-white rounded-2xl p-6 border border-primary/10 text-center">
+          <div class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-primary text-white mb-4">
+            <i data-lucide="trees" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-bold text-lg text-primary mb-2">פתרונות ליישובים</h3>
+          <p class="text-sm text-ink/70">שירות לקיבוצים, מושבים וקהילות.</p>
+        </article>
+
+        <article class="bg-gradient-to-br from-bg to-white rounded-2xl p-6 border border-primary/10 text-center">
+          <div class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-primary text-white mb-4">
+            <i data-lucide="target" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-bold text-lg text-primary mb-2">בדיקה לפי צורך</h3>
+          <p class="text-sm text-ink/70">התאמה לכתובת ולסוג השימוש בפועל.</p>
+        </article>
+
+        <article class="bg-gradient-to-br from-bg to-white rounded-2xl p-6 border border-primary/10 text-center">
+          <div class="inline-flex w-14 h-14 items-center justify-center rounded-2xl bg-primary text-white mb-4">
+            <i data-lucide="building-2" class="w-7 h-7"></i>
+          </div>
+          <h3 class="font-bold text-lg text-primary mb-2">בתים ועסקים</h3>
+          <p class="text-sm text-ink/70">מענה למגוון סוגי לקוחות באזור.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== COMPARISON ============== -->
+  <section class="py-20 lg:py-24 bg-bg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto reveal">
+        <span class="inline-block text-secondary font-bold text-sm uppercase tracking-wider mb-3">השוואה</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary mb-4 leading-tight">
+          למה בכלל לעבור לסיבים?
+        </h2>
+        <p class="text-lg text-ink/70">
+          סיבים אופטיים מיועדים לספק חוויית גלישה יציבה ומהירה יותר, במיוחד כשיש שימוש כבד באינטרנט, מספר מכשירים במקביל, עבודה מהבית או צורך עסקי.
+        </p>
+      </div>
+
+      <div class="mt-12 reveal overflow-x-auto rounded-2xl shadow-soft border border-primary/10 bg-white">
+        <table class="w-full text-right min-w-[600px]">
+          <thead>
+            <tr class="bg-primary text-white">
+              <th class="px-5 py-4 font-bold text-base">מאפיין</th>
+              <th class="px-5 py-4 font-bold text-base">אינטרנט רגיל</th>
+              <th class="px-5 py-4 font-bold text-base bg-secondary">אינטרנט סיבים</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-primary/10">
+            <tr class="hover:bg-bg/50 transition">
+              <td class="px-5 py-4 font-semibold text-ink">יציבות</td>
+              <td class="px-5 py-4 text-ink/70">עשויה להשתנות לפי תשתית ועומסים</td>
+              <td class="px-5 py-4 text-ink/85 bg-accent/5">מיועד לחיבור יציב ומהיר יותר</td>
+            </tr>
+            <tr class="hover:bg-bg/50 transition">
+              <td class="px-5 py-4 font-semibold text-ink">ריבוי מכשירים</td>
+              <td class="px-5 py-4 text-ink/70">עלול להכביד על הרשת</td>
+              <td class="px-5 py-4 text-ink/85 bg-accent/5">מתאים יותר לשימושים מרובים</td>
+            </tr>
+            <tr class="hover:bg-bg/50 transition">
+              <td class="px-5 py-4 font-semibold text-ink">עבודה מהבית</td>
+              <td class="px-5 py-4 text-ink/70">תלוי באיכות הקו</td>
+              <td class="px-5 py-4 text-ink/85 bg-accent/5">מתאים יותר לשיחות וידאו ולעבודה בענן</td>
+            </tr>
+            <tr class="hover:bg-bg/50 transition">
+              <td class="px-5 py-4 font-semibold text-ink">עסקים וצימרים</td>
+              <td class="px-5 py-4 text-ink/70">לא תמיד מספיק</td>
+              <td class="px-5 py-4 text-ink/85 bg-accent/5">פתרון רלוונטי לצרכים עסקיים</td>
+            </tr>
+            <tr class="hover:bg-bg/50 transition">
+              <td class="px-5 py-4 font-semibold text-ink">בדיקת זמינות</td>
+              <td class="px-5 py-4 text-ink/70">לפי ספק ותשתית</td>
+              <td class="px-5 py-4 text-ink/85 bg-accent/5">לפי כתובת ותשתית סיבים זמינה</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="text-center text-sm text-ink/55 mt-5 italic reveal">
+        ההשוואה כללית ואינה מחליפה בדיקת זמינות ותנאי חבילה בפועל.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== FAQ ============== -->
+  <section id="faq" class="py-20 lg:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto reveal mb-12">
+        <span class="inline-block text-secondary font-bold text-sm uppercase tracking-wider mb-3">שאלות נפוצות</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary mb-4 leading-tight">
+          שאלות נפוצות
+        </h2>
+        <p class="text-lg text-ink/70">כל מה שחשוב לדעת לפני שמתחילים את הבדיקה.</p>
+      </div>
+
+      <div class="space-y-3 reveal-stagger">
+        <details class="faq-item bg-bg rounded-2xl border border-primary/10 group">
+          <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer" aria-expanded="false">
+            <span class="font-bold text-lg text-primary">האם השירות זמין בכל הגולן?</span>
+            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-secondary/10 text-secondary inline-flex items-center justify-center">
+              <i data-lucide="plus" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <div class="faq-answer px-5 pb-5 text-ink/75 leading-relaxed">
+            לא בהכרח. זמינות החיבור משתנה לפי יישוב, רחוב, כתובת ותשתית קיימת. לכן מומלץ להשאיר פרטים לבדיקת זמינות.
+          </div>
+        </details>
+
+        <details class="faq-item bg-bg rounded-2xl border border-primary/10">
+          <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer" aria-expanded="false">
+            <span class="font-bold text-lg text-primary">האם הדף מיועד רק לבתים פרטיים?</span>
+            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-secondary/10 text-secondary inline-flex items-center justify-center">
+              <i data-lucide="plus" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <div class="faq-answer px-5 pb-5 text-ink/75 leading-relaxed">
+            לא. ניתן לבדוק התאמה גם לבתים, עסקים, צימרים, קליניקות ומשרדים באזור הגולן.
+          </div>
+        </details>
+
+        <details class="faq-item bg-bg rounded-2xl border border-primary/10">
+          <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer" aria-expanded="false">
+            <span class="font-bold text-lg text-primary">האם יש התחייבות לאחר השארת פרטים?</span>
+            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-secondary/10 text-secondary inline-flex items-center justify-center">
+              <i data-lucide="plus" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <div class="faq-answer px-5 pb-5 text-ink/75 leading-relaxed">
+            לא. השארת פרטים מיועדת לבדיקת זמינות וקבלת מידע מנציג.
+          </div>
+        </details>
+
+        <details class="faq-item bg-bg rounded-2xl border border-primary/10">
+          <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer" aria-expanded="false">
+            <span class="font-bold text-lg text-primary">תוך כמה זמן חוזרים אליי?</span>
+            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-secondary/10 text-secondary inline-flex items-center justify-center">
+              <i data-lucide="plus" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <div class="faq-answer px-5 pb-5 text-ink/75 leading-relaxed">
+            נציג יחזור בהקדם האפשרי בהתאם לשעות הפעילות ועומס הפניות.
+          </div>
+        </details>
+
+        <details class="faq-item bg-bg rounded-2xl border border-primary/10">
+          <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer" aria-expanded="false">
+            <span class="font-bold text-lg text-primary">האם אפשר לדעת מחיר מראש?</span>
+            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-secondary/10 text-secondary inline-flex items-center justify-center">
+              <i data-lucide="plus" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <div class="faq-answer px-5 pb-5 text-ink/75 leading-relaxed">
+            פרטי החבילות, המחירים והתנאים נמסרים על ידי נציג בהתאם לזמינות ולשירות הרלוונטי לכתובת.
+          </div>
+        </details>
+
+        <details class="faq-item bg-bg rounded-2xl border border-primary/10">
+          <summary class="flex items-center justify-between gap-4 p-5 cursor-pointer" aria-expanded="false">
+            <span class="font-bold text-lg text-primary">מה צריך להכין לפני שיחה עם נציג?</span>
+            <span class="faq-icon flex-shrink-0 w-9 h-9 rounded-full bg-secondary/10 text-secondary inline-flex items-center justify-center">
+              <i data-lucide="plus" class="w-5 h-5"></i>
+            </span>
+          </summary>
+          <div class="faq-answer px-5 pb-5 text-ink/75 leading-relaxed">
+            כתובת מדויקת, שם היישוב, סוג הנכס, וסוג השימוש העיקרי באינטרנט.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FINAL CTA ============== -->
+  <section class="relative py-20 lg:py-24 bg-cta text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-15 pointer-events-none">
+      <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1920&q=70" alt="" aria-hidden="true" class="w-full h-full object-cover" loading="lazy" />
+    </div>
+
+    <div class="fiber-line" style="top: 25%; left: 5%; width: 90%;"></div>
+    <div class="fiber-line" style="bottom: 25%; left: 10%; width: 80%; animation-delay: 2.5s;"></div>
+
+    <span class="particle" style="top: 30%; left: 20%; width: 8px; height: 8px;"></span>
+    <span class="particle" style="top: 60%; right: 25%; width: 6px; height: 6px; animation-delay: 1.5s;"></span>
+
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass text-sm text-accent font-semibold mb-5">
+        <i data-lucide="sparkles" class="w-4 h-4"></i>
+        בדיקה לא מחייבת
+      </span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-5 leading-tight">
+        בדקו עכשיו אם גם הכתובת שלכם<br>
+        <span class="bg-gradient-to-l from-accent to-secondary bg-clip-text text-transparent">יכולה להתחבר לסיבים</span>
+      </h2>
+      <p class="text-lg sm:text-xl text-white/85 max-w-2xl mx-auto mb-9">
+        השאירו פרטים ונציג יחזור אליכם עם בדיקת זמינות והאפשרויות הרלוונטיות באזור הגולן.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#lead-form" class="btn-primary cta-pulse">
+          <i data-lucide="search-check" class="w-5 h-5"></i>
+          בדיקת זמינות סיבים
+        </a>
+        <a href="tel:*3054" class="btn-ghost">
+          <i data-lucide="headset" class="w-5 h-5"></i>
+          דברו עם נציג: *3054
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="bg-dark text-white/85 pt-14 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-10">
+        <div>
+          <div class="flex items-center gap-2.5 mb-4">
+            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-secondary to-primary text-white">
+              <i data-lucide="cable" class="w-5 h-5"></i>
+            </span>
+            <span class="text-white font-extrabold text-xl">טלרן תקשורת</span>
+          </div>
+          <p class="text-white/65 text-sm leading-relaxed">
+            פתרונות אינטרנט סיבים אופטיים לקיבוצים, יישובים, בתים ועסקים באזור הגולן.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-white mb-3">יצירת קשר</h3>
+          <ul class="space-y-2.5 text-sm">
+            <li class="flex items-center gap-2">
+              <i data-lucide="headset" class="w-4 h-4 text-accent"></i>
+              <a href="tel:*3054" class="hover:text-accent transition">שירות לקוחות: <strong dir="ltr">*3054</strong></a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i data-lucide="wrench" class="w-4 h-4 text-accent"></i>
+              <a href="tel:*2063" class="hover:text-accent transition">שירות טכני: <strong dir="ltr">*2063</strong></a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-white mb-3">מידע</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-accent transition">מדיניות פרטיות</a></li>
+            <li><a href="#" class="hover:text-accent transition">תנאי שימוש</a></li>
+            <li><a href="#faq" class="hover:text-accent transition">שאלות נפוצות</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 pt-6 text-xs text-white/55 leading-relaxed">
+        <p class="mb-3">
+          המידע בדף זה נועד להשארת פרטים ובדיקת זמינות בלבד. השירות, המחירים, החבילות והחיבור בפועל כפופים לתנאי החברה, זמינות תשתית ובדיקת היתכנות.
+        </p>
+        <p class="text-white/45">© <span id="year"></span> טלרן תקשורת. כל הזכויות שמורות.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp + Phone -->
+  <div class="fixed bottom-5 left-4 z-30 flex flex-col gap-3">
+    <a href="https://wa.me/972000000000" aria-label="פנייה בוואטסאפ" class="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-success text-white inline-flex items-center justify-center shadow-soft hover:scale-110 transition-transform" style="width:56px;height:56px;">
+      <i data-lucide="message-circle" class="w-6 h-6"></i>
+    </a>
+    <a href="tel:*3054" aria-label="חיוג לשירות" class="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-primary text-white inline-flex items-center justify-center shadow-soft hover:scale-110 transition-transform" style="width:56px;height:56px;">
+      <i data-lucide="phone" class="w-6 h-6"></i>
+    </a>
+  </div>
+
+  <!-- Mobile sticky bottom CTA -->
+  <div id="mobile-cta" class="mobile-cta-bar fixed bottom-0 inset-x-0 z-30 sm:hidden p-3 bg-white/95 backdrop-blur-md border-t border-primary/10 shadow-soft">
+    <a href="#lead-form" class="btn-primary w-full">
+      <i data-lucide="search-check" class="w-5 h-5"></i>
+      בדיקת זמינות סיבים בגולן
+    </a>
+  </div>
+
+  <script>
+    // Lucide
+    lucide.createIcons();
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Sticky header scrolled state
+    const header = document.getElementById('site-header');
+    const onScroll = () => {
+      if (window.scrollY > 40) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+
+      // mobile sticky cta after hero
+      const mobileCta = document.getElementById('mobile-cta');
+      if (window.scrollY > 600) mobileCta.classList.add('show');
+      else mobileCta.classList.remove('show');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+    // Close on link click
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+
+    // FAQ aria-expanded sync
+    document.querySelectorAll('details.faq-item').forEach(d => {
+      const summary = d.querySelector('summary');
+      d.addEventListener('toggle', () => {
+        summary.setAttribute('aria-expanded', String(d.open));
+      });
+    });
+
+    // Form handling (client-side success state)
+    document.querySelectorAll('form[data-form]').forEach(form => {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        const key = form.dataset.form;
+        const success = document.querySelector(`[data-success="${key}"]`);
+        form.classList.add('hidden');
+        if (success) {
+          success.classList.remove('hidden');
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        // TODO: send to backend / webhook
+        try {
+          const data = Object.fromEntries(new FormData(form).entries());
+          console.log('Lead submitted:', { form: key, ...data });
+        } catch (_) {}
+      });
+    });
+  </script>
+
+</body>
+</html>

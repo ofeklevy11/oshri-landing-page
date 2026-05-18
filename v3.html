@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>אינטרנט סיבים בגולן | בדיקת זמינות עם טלרן תקשורת</title>
+<meta name="description" content="טלרן תקשורת — בדיקת זמינות אינטרנט סיבים אופטיים ביישובים, קיבוצים ובתים פרטיים באזור הגולן. השאירו פרטים ונחזור אליכם." />
+<meta property="og:title" content="אינטרנט סיבים בגולן | טלרן תקשורת" />
+<meta property="og:description" content="בדיקת זמינות אינטרנט סיבים אופטיים באזור הגולן — לבתים, עסקים, צימרים ויישובים." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="he_IL" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "טלרן תקשורת",
+      "areaServed": "רמת הגולן",
+      "telephone": ["*3054", "*2063"],
+      "description": "שירותי תקשורת, תשתיות וסיבים אופטיים ליישובים, קיבוצים, בתים פרטיים ועסקים באזור הגולן."
+    },
+    {
+      "@type": "Service",
+      "name": "אינטרנט סיבים אופטיים בגולן",
+      "provider": { "@type": "LocalBusiness", "name": "טלרן תקשורת" },
+      "areaServed": "רמת הגולן",
+      "serviceType": "אינטרנט סיבים אופטיים"
+    }
+  ]
+}
+</script>
+<style>
+  :root{
+    --white:#ffffff;
+    --coral:#ff6b6b;
+    --coral-soft:#ffb3b3;
+    --teal:#2ec4b6;
+    --teal-soft:#a8e6dc;
+    --yellow:#ffe66d;
+    --navy:#1d3557;
+    --mint:#f0f9f7;
+    --cream:#fff9eb;
+    --muted:#5a6b80;
+    --shadow:0 10px 30px rgba(29,53,87,.08);
+    --shadow-lg:0 20px 50px rgba(29,53,87,.12);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--white);color:var(--navy);font-family:"Heebo","Fredoka",system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:"Fredoka","Heebo",system-ui,sans-serif;font-weight:600;color:var(--navy);line-height:1.2;margin:0 0 .5em}
+  h1{font-size:clamp(2rem,4.5vw,3.4rem)}
+  h2{font-size:clamp(1.6rem,3.2vw,2.4rem)}
+  h3{font-size:1.2rem}
+  p{margin:0 0 1em;color:var(--navy)}
+  a{color:var(--coral);text-decoration:none}
+  img{max-width:100%}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+  .skip-link{position:absolute;right:-9999px;top:0;background:var(--coral);color:#fff;padding:10px 16px;border-radius:999px;z-index:9999}
+  .skip-link:focus{right:16px;top:16px}
+
+  /* Header */
+  header.site{position:sticky;top:0;background:#fff;box-shadow:0 4px 20px rgba(29,53,87,.06);z-index:100}
+  header.site .row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:"Fredoka";font-weight:700;font-size:1.3rem;color:var(--navy)}
+  .logo-mark{width:38px;height:38px;border-radius:14px;background:linear-gradient(135deg,var(--coral),var(--yellow));display:grid;place-items:center;color:#fff;box-shadow:0 6px 14px rgba(255,107,107,.4)}
+  nav.primary{display:flex;gap:6px}
+  nav.primary a{color:var(--navy);font-weight:500;padding:8px 14px;border-radius:999px;transition:background .2s}
+  nav.primary a:hover{background:var(--mint)}
+  .btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 28px;font-weight:700;font-family:"Heebo";cursor:pointer;border:none;transition:transform .2s,box-shadow .2s,background .2s;font-size:1rem;text-align:center;justify-content:center}
+  .btn-primary{background:var(--coral);color:#fff;box-shadow:0 8px 20px rgba(255,107,107,.35)}
+  .btn-primary:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 12px 26px rgba(255,107,107,.45);background:#ff5252}
+  .btn-secondary{background:transparent;color:var(--teal);border:2px solid var(--teal)}
+  .btn-secondary:hover{transform:translateY(-3px) scale(1.02);background:var(--teal);color:#fff}
+  .header-cta{padding:10px 22px;font-size:.95rem}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--navy)}
+
+  /* Hero */
+  section{position:relative;overflow:hidden}
+  .hero{padding:60px 0 80px;background:var(--white)}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.5;z-index:0;pointer-events:none}
+  .blob-1{width:300px;height:300px;background:var(--coral-soft);top:-80px;left:-80px;animation:blob 14s ease-in-out infinite}
+  .blob-2{width:260px;height:260px;background:var(--teal-soft);bottom:-60px;right:10%;animation:blob 16s ease-in-out infinite reverse}
+  .blob-3{width:200px;height:200px;background:var(--yellow);opacity:.4;top:30%;right:-50px;animation:blob 18s ease-in-out infinite}
+  @keyframes blob{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(20px,-30px) scale(1.1)}66%{transform:translate(-20px,20px) scale(.95)}}
+  .hero-text{position:relative;z-index:1}
+  .hero h1{margin-bottom:18px}
+  .hero .sub{font-size:1.18rem;color:var(--navy);max-width:600px;margin-bottom:14px}
+  .hero .support{color:var(--muted);max-width:600px}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin:28px 0}
+  .badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .badge{background:var(--mint);color:var(--navy);padding:8px 16px;border-radius:999px;font-size:.9rem;font-weight:500;display:inline-flex;align-items:center;gap:6px;border:1px solid #d6efea}
+  .badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--coral)}
+  .badge:nth-child(2)::before{background:var(--teal)}
+  .badge:nth-child(3)::before{background:var(--yellow)}
+  .mini-form{background:#fff;border-radius:28px;padding:28px;box-shadow:var(--shadow-lg);border-top:5px solid var(--coral);position:relative;z-index:1}
+  .mini-form h3{margin-bottom:16px;color:var(--coral);font-family:"Fredoka"}
+  .field{margin-bottom:14px}
+  .field label{display:block;margin-bottom:6px;font-weight:500;color:var(--navy);font-size:.95rem}
+  .field input,.field select,.field textarea{width:100%;padding:13px 16px;border:2px solid #e6ecf2;border-radius:16px;font-family:"Heebo";font-size:1rem;background:#fff;color:var(--navy);transition:border-color .2s,box-shadow .2s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--coral);box-shadow:0 0 0 4px rgba(255,107,107,.15)}
+  .field .req{color:var(--coral)}
+
+  /* Wavy divider */
+  .wavy{display:block;width:100%;height:60px}
+
+  /* Sections */
+  .sec{padding:80px 0;position:relative}
+  .sec.mint{background:var(--mint)}
+  .sec.cream{background:var(--cream)}
+  .sec-head{text-align:center;max-width:780px;margin:0 auto 50px}
+  .sec-head p{color:var(--muted);font-size:1.08rem}
+
+  /* Cards grid */
+  .grid{display:grid;gap:24px}
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  .grid-4{grid-template-columns:repeat(4,1fr)}
+  .card{background:#fff;border-radius:24px;padding:28px;box-shadow:var(--shadow);border-top:4px solid var(--coral);transition:transform .25s,box-shadow .25s;position:relative;z-index:1}
+  .card:nth-child(even){border-top-color:var(--teal)}
+  .card:nth-child(3n){border-top-color:var(--yellow)}
+  .card:hover{transform:translateY(-6px) rotate(-1deg) scale(1.02);box-shadow:var(--shadow-lg)}
+  .card .icon-wrap{width:54px;height:54px;border-radius:18px;background:linear-gradient(135deg,var(--coral),var(--yellow));display:grid;place-items:center;color:#fff;margin-bottom:16px}
+  .card:nth-child(even) .icon-wrap{background:linear-gradient(135deg,var(--teal),var(--mint));color:#fff}
+  .card:nth-child(3n) .icon-wrap{background:linear-gradient(135deg,var(--yellow),var(--coral-soft));color:var(--navy)}
+  .card h3{margin-bottom:8px}
+  .card p{color:var(--muted);margin:0}
+
+  /* Bullets */
+  .bullets{list-style:none;padding:0;margin:24px 0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .bullets li{background:#fff;border-radius:18px;padding:16px 20px;display:flex;align-items:center;gap:12px;box-shadow:0 4px 12px rgba(29,53,87,.05)}
+  .bullets li .dot{width:36px;height:36px;border-radius:50%;background:var(--coral);color:#fff;display:grid;place-items:center;flex-shrink:0}
+  .bullets li:nth-child(2) .dot{background:var(--teal)}
+  .bullets li:nth-child(3) .dot{background:var(--yellow);color:var(--navy)}
+  .bullets li:nth-child(4) .dot{background:var(--coral)}
+
+  /* Map */
+  .map-wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .golan-map{position:relative;background:#fff;border-radius:32px;padding:30px;box-shadow:var(--shadow);min-height:340px;border-top:4px solid var(--teal)}
+  .blob-golan{position:absolute;width:220px;height:280px;background:var(--coral);border-radius:60% 40% 65% 35% / 55% 60% 40% 45%;top:30px;left:50%;transform:translateX(-50%);opacity:.9;animation:wobble 6s ease-in-out infinite}
+  @keyframes wobble{0%,100%{border-radius:60% 40% 65% 35% / 55% 60% 40% 45%}50%{border-radius:50% 50% 55% 45% / 60% 55% 45% 40%}}
+  .town{position:absolute;width:14px;height:14px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(46,196,182,.25);animation:bounce 2.5s ease-in-out infinite}
+  .town::after{content:attr(data-name);position:absolute;top:18px;right:50%;transform:translateX(50%);font-size:.78rem;color:var(--navy);background:#fff;padding:2px 8px;border-radius:999px;white-space:nowrap;font-weight:500;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  .t1{top:80px;left:50%;animation-delay:0s}
+  .t2{top:140px;left:40%;animation-delay:.4s;background:var(--yellow);box-shadow:0 0 0 4px rgba(255,230,109,.3)}
+  .t3{top:210px;left:55%;animation-delay:.8s;background:var(--coral);box-shadow:0 0 0 4px rgba(255,107,107,.25)}
+  .t4{top:175px;left:62%;animation-delay:1.2s}
+
+  /* Steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:step}
+  .step{background:#fff;border-radius:24px;padding:32px 24px;text-align:center;box-shadow:var(--shadow);position:relative;transition:transform .25s}
+  .step:hover{transform:translateY(-6px) rotate(-1deg)}
+  .step-num{counter-increment:step;width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--coral),var(--yellow));color:#fff;display:grid;place-items:center;margin:0 auto 16px;font-family:"Fredoka";font-size:1.5rem;font-weight:700;box-shadow:0 8px 18px rgba(255,107,107,.3)}
+  .step:nth-child(2) .step-num{background:linear-gradient(135deg,var(--teal),var(--mint))}
+  .step:nth-child(3) .step-num{background:linear-gradient(135deg,var(--yellow),var(--coral))}
+  .step:nth-child(4) .step-num{background:linear-gradient(135deg,var(--coral),var(--teal))}
+  .step p{color:var(--muted);margin:0;font-size:.95rem}
+
+  /* Main form */
+  .form-section{background:linear-gradient(135deg,var(--mint) 0%,#fff 100%)}
+  .form-wrap{max-width:760px;margin:0 auto;background:#fff;border-radius:32px;padding:44px;box-shadow:var(--shadow-lg);border-top:6px solid var(--coral)}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .field.full{grid-column:span 2}
+  .check-row{display:flex;align-items:flex-start;gap:10px;margin:16px 0}
+  .check-row input{width:auto;margin-top:4px}
+  .check-row label{font-size:.9rem;color:var(--muted)}
+  .micro{color:var(--muted);font-size:.85rem;text-align:center;margin-top:12px}
+  .success-msg{display:none;text-align:center;padding:30px}
+  .success-msg.show{display:block}
+  .success-icon{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--mint));display:grid;place-items:center;margin:0 auto 20px;color:#fff}
+
+  /* Comparison */
+  .compare{background:#fff;border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+  table.compare-tbl{width:100%;border-collapse:collapse}
+  table.compare-tbl th,table.compare-tbl td{padding:16px 18px;text-align:right;border-bottom:1px solid #eef3f8}
+  table.compare-tbl thead{background:linear-gradient(135deg,var(--coral),var(--yellow));color:#fff}
+  table.compare-tbl thead th{font-family:"Fredoka";font-weight:600}
+  table.compare-tbl tbody tr:hover{background:var(--mint)}
+  table.compare-tbl td:first-child{font-weight:600;color:var(--navy)}
+  .compare-note{color:var(--muted);font-size:.9rem;margin-top:14px;text-align:center}
+
+  /* FAQ */
+  details.faq{background:#fff;border-radius:20px;padding:0;margin-bottom:14px;box-shadow:0 4px 12px rgba(29,53,87,.05);overflow:hidden;border-top:3px solid var(--teal)}
+  details.faq:nth-child(even){border-top-color:var(--coral)}
+  details.faq summary{padding:20px 24px;cursor:pointer;font-weight:600;color:var(--navy);list-style:none;display:flex;justify-content:space-between;align-items:center;font-family:"Fredoka";font-size:1.05rem}
+  details.faq summary::-webkit-details-marker{display:none}
+  details.faq summary::after{content:"+";font-size:1.6rem;color:var(--coral);transition:transform .2s}
+  details.faq[open] summary::after{transform:rotate(45deg)}
+  details.faq .faq-body{padding:0 24px 22px;color:var(--muted)}
+
+  /* Final CTA */
+  .final{background:linear-gradient(135deg,var(--coral),var(--yellow));color:#fff;text-align:center;padding:80px 0}
+  .final h2{color:#fff}
+  .final p{color:#fff;opacity:.95;font-size:1.15rem;max-width:640px;margin:0 auto 28px}
+  .final .btn-primary{background:#fff;color:var(--coral)}
+  .final .btn-primary:hover{background:var(--navy);color:#fff}
+
+  /* Footer */
+  footer{background:var(--navy);color:#fff;padding:50px 0 30px}
+  footer .row{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px;margin-bottom:30px}
+  footer h4{font-family:"Fredoka";color:var(--yellow);margin:0 0 14px;font-size:1.1rem}
+  footer a{color:#cfd9e6;display:block;padding:4px 0}
+  footer a:hover{color:var(--yellow)}
+  footer .legal{border-top:1px solid rgba(255,255,255,.15);padding-top:20px;color:#9aabc2;font-size:.85rem;text-align:center;line-height:1.7}
+
+  /* Floating buttons */
+  .floating{position:fixed;bottom:24px;left:24px;display:flex;flex-direction:column;gap:12px;z-index:90}
+  .float-btn{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;color:#fff;box-shadow:var(--shadow-lg);transition:transform .2s}
+  .float-btn:hover{transform:scale(1.1) rotate(-5deg)}
+  .float-wa{background:var(--teal)}
+  .float-phone{background:var(--coral)}
+
+  /* Mobile sticky bottom */
+  .mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:#fff;padding:12px 16px;box-shadow:0 -4px 16px rgba(29,53,87,.12);z-index:80}
+  .mobile-cta .btn{width:100%}
+
+  /* Reveal */
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}
+  .reveal.in{opacity:1;transform:translateY(0)}
+
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{animation-duration:.001s!important;animation-iteration-count:1!important;transition-duration:.001s!important}
+    .reveal{opacity:1;transform:none}
+  }
+
+  /* Responsive */
+  @media (max-width:900px){
+    .hero-grid,.map-wrap{grid-template-columns:1fr}
+    .grid-3,.grid-4,.steps,.form-grid{grid-template-columns:1fr 1fr}
+    .bullets{grid-template-columns:1fr}
+    footer .row{grid-template-columns:1fr 1fr}
+    nav.primary{display:none}
+    .menu-toggle{display:inline-flex}
+    nav.primary.open{display:flex;flex-direction:column;position:absolute;top:70px;right:16px;left:16px;background:#fff;padding:16px;border-radius:24px;box-shadow:var(--shadow-lg)}
+    .mobile-cta{display:block}
+    .floating{bottom:80px}
+    footer{padding-bottom:90px}
+  }
+  @media (max-width:560px){
+    .grid-2,.grid-3,.grid-4,.steps,.form-grid{grid-template-columns:1fr}
+    .field.full{grid-column:span 1}
+    .sec{padding:60px 0}
+    .form-wrap{padding:28px 22px}
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">דלגו לתוכן</a>
+
+<header class="site">
+  <div class="container row">
+    <a href="#" class="logo" aria-label="טלרן תקשורת">
+      <span class="logo-mark"><i data-lucide="wifi" aria-hidden="true"></i></span>
+      <span>טלרן תקשורת</span>
+    </a>
+    <nav class="primary" id="primaryNav" aria-label="ניווט ראשי">
+      <a href="#benefits">יתרונות</a>
+      <a href="#how">איך זה עובד</a>
+      <a href="#local">אזורי שירות</a>
+      <a href="#faq">שאלות נפוצות</a>
+    </nav>
+    <div style="display:flex;gap:8px;align-items:center">
+      <a href="#lead-form" class="btn btn-primary header-cta">בדיקת זמינות</a>
+      <button class="menu-toggle" aria-label="פתח תפריט" aria-expanded="false" id="menuBtn"><i data-lucide="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- Hero -->
+<section class="hero">
+  <span class="blob blob-1"></span>
+  <span class="blob blob-2"></span>
+  <span class="blob blob-3"></span>
+  <div class="container hero-grid">
+    <div class="hero-text reveal">
+      <h1>אינטרנט סיבים מהיר ויציב ליישובי הגולן</h1>
+      <p class="sub">בדקו אם ניתן לחבר את הבית, העסק או הצימר שלכם לתשתית סיבים של טלרן תקשורת באזור הגולן.</p>
+      <p class="support">עובדים מהבית, מעלים קבצים, צופים בסטרימינג, מנהלים עסק או פשוט רוצים אינטרנט שלא נתקע ברגע הכי חשוב? השאירו פרטים ונבדוק עבורכם זמינות לפי יישוב וכתובת.</p>
+      <div class="hero-ctas">
+        <a href="#lead-form" class="btn btn-primary"><i data-lucide="search-check"></i> בדיקת זמינות עכשיו</a>
+        <a href="#lead-form" class="btn btn-secondary"><i data-lucide="phone"></i> השאירו פרטים ונחזור אליכם</a>
+      </div>
+      <div class="badges">
+        <span class="badge">בדיקה לפי כתובת</span>
+        <span class="badge">מתאים לבתים ולעסקים</span>
+        <span class="badge">שירות לקיבוצים ויישובים</span>
+      </div>
+    </div>
+    <form class="mini-form reveal" id="miniForm" novalidate>
+      <h3>בדיקת זמינות מהירה</h3>
+      <div class="field">
+        <label for="mf-name">שם <span class="req">*</span></label>
+        <input type="text" id="mf-name" name="name" required autocomplete="name" />
+      </div>
+      <div class="field">
+        <label for="mf-phone">טלפון <span class="req">*</span></label>
+        <input type="tel" id="mf-phone" name="phone" required autocomplete="tel" pattern="[0-9\-\s]{7,}" />
+      </div>
+      <div class="field">
+        <label for="mf-town">יישוב <span class="req">*</span></label>
+        <input type="text" id="mf-town" name="town" required />
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%"><i data-lucide="zap"></i> בדקו לי זמינות</button>
+      <div class="success-msg" id="miniSuccess" role="status" aria-live="polite">
+        <div class="success-icon"><i data-lucide="check"></i></div>
+        <p>הפנייה התקבלה. נציג יחזור אליכם לבדיקת זמינות הסיבים באזורכם.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Pain -->
+<section class="sec mint">
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>כשהאינטרנט לא יציב, כל הבית מרגיש את זה</h2>
+      <p>ביישובים רבים, במיוחד באזורים מרוחקים, חיבור האינטרנט משפיע ישירות על העבודה, הלימודים, העסק והחיים בבית. סיבים אופטיים יכולים לשפר משמעותית את חוויית השימוש — בכפוף לזמינות תשתית באזורכם.</p>
+    </div>
+    <div class="grid grid-4">
+      <article class="card reveal">
+        <div class="icon-wrap"><i data-lucide="video-off"></i></div>
+        <h3>זום נתקע באמצע פגישה</h3>
+        <p>עבודה מהבית דורשת חיבור יציב, במיוחד כשיש שיחות וידאו, העלאות קבצים ומספר מכשירים במקביל.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon-wrap"><i data-lucide="tv-minimal"></i></div>
+        <h3>הילדים בסטרימינג ואתם בלי רוחב פס</h3>
+        <p>כשכל הבית מחובר יחד, אינטרנט חלש מורגש מיד.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon-wrap"><i data-lucide="store"></i></div>
+        <h3>עסק מקומי לא יכול להרשות ניתוקים</h3>
+        <p>קליניקה, משרד, צימר או חנות צריכים חיבור יציב לשגרה עסקית רציפה.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon-wrap"><i data-lucide="map-pin"></i></div>
+        <h3>ביישובים מרוחקים הבחירה לא פשוטה</h3>
+        <p>בדיוק לכן חשוב לבצע בדיקת זמינות לפי כתובת ולא להסתמך על ניחושים.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Solution -->
+<section class="sec">
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>סיבים אופטיים שמביאים את הגולן קדימה</h2>
+      <p>תשתית סיבים מאפשרת חוויית גלישה יציבה ומהירה יותר לעומת פתרונות ישנים, ומתאימה במיוחד לבתים ולעסקים שבהם יש שימוש אינטנסיבי באינטרנט. בטלרן תקשורת ניתן לבדוק זמינות חיבור ביישובים וקיבוצים, ולקבל מענה לפי הכתובת והצורך בפועל.</p>
+    </div>
+    <ul class="bullets reveal">
+      <li><span class="dot"><i data-lucide="check"></i></span> חיבור יציב יותר לשימוש יומיומי</li>
+      <li><span class="dot"><i data-lucide="check"></i></span> מתאים לריבוי מכשירים בבית</li>
+      <li><span class="dot"><i data-lucide="check"></i></span> פתרון רלוונטי לעבודה מהבית ולעסקים</li>
+      <li><span class="dot"><i data-lucide="check"></i></span> בדיקת זמינות ממוקדת לפי יישוב וכתובת</li>
+    </ul>
+    <p style="text-align:center;color:var(--muted);font-size:.92rem;margin-top:20px">החיבור בפועל כפוף לזמינות תשתית, תנאי השטח ובדיקת היתכנות.</p>
+  </div>
+</section>
+
+<!-- Benefits -->
+<section class="sec mint" id="benefits">
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>למי זה מתאים?</h2>
+    </div>
+    <div class="grid grid-3">
+      <article class="card reveal">
+        <div class="icon-wrap"><i data-lucide="users"></i></div>
+        <h3>משפחות</h3>
+        <p>טלוויזיה, מחשב, טאבלט וקונסולה — כולם מחוברים בו-זמנית בלי ויכוחים על רוחב פס.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon-wrap"><i data-lucide="laptop"></i></div>
+        <h3>עובדים מהבית</h3>
+        <p>שיחות וידאו, עבודה בענן והעלאת קבצים גדולים דורשים חיבור יציב לאורך כל יום העבודה.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon-wrap"><i data-lucide="briefcase"></i></div>
+        <h3>בעלי עסקים</h3>
+        <p>מערכות CRM, סליקה, מצלמות אבטחה ודוא"ל עסקי דורשים תקשורת אמינה ורציפה.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon-wrap"><i data-lucide="bed-double"></i></div>
+        <h3>צימרים ואירוח</h3>
+        <p>WiFi איכותי לאורחים הוא חלק מהותי מחוויית האירוח שלכם.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon-wrap"><i data-lucide="graduation-cap"></i></div>
+        <h3>סטודנטים ותלמידים</h3>
+        <p>למידה מרחוק, הגשות וכיתות וירטואליות — בלי תקיעות באמצע השיעור.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon-wrap"><i data-lucide="home"></i></div>
+        <h3>בתים חכמים ואבטחה</h3>
+        <p>מצלמות, גיבויי ענן ומערכות בית חכם תלויים בחיבור יציב ועקבי.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Local Golan -->
+<section class="sec" id="local">
+  <span class="blob blob-2" style="top:10%;left:5%"></span>
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>אינטרנט סיבים שמותאם לחיים בגולן</h2>
+    </div>
+    <div class="map-wrap">
+      <div class="reveal">
+        <p>הגולן הוא אזור ייחודי — שילוב של יישובים קהילתיים, קיבוצים, חוות פרטיות וצימרים פזורים על פני שטח רחב. תנאי השטח, המרחקים והתשתיות המקומיות יוצרים אתגרי תקשורת שלא קיימים במרכז.</p>
+        <p>טלרן תקשורת פועלת בתחום תשתיות הסיבים האופטיים, ומציעה אפשרות לבדוק זמינות חיבור לפי יישוב וכתובת — כך שכל פנייה נבחנת לגופה ולא על בסיס הכללות.</p>
+        <p><strong>קצרין, מושבים, קיבוצים ויישובים נוספים באזור הגולן — בכפוף לבדיקה.</strong></p>
+        <p style="color:var(--muted);font-size:.9rem">הרשימה להמחשה בלבד ואינה מהווה התחייבות לזמינות.</p>
+      </div>
+      <div class="golan-map reveal" aria-label="מפה איורית של אזור הגולן">
+        <div class="blob-golan"></div>
+        <span class="town t1" data-name="קצרין"></span>
+        <span class="town t2" data-name="מושב"></span>
+        <span class="town t3" data-name="קיבוץ"></span>
+        <span class="town t4" data-name="יישוב"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How -->
+<section class="sec cream" id="how">
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>איך מתחברים?</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3>משאירים פרטים</h3>
+        <p>ממלאים שם, טלפון ויישוב בטופס בעמוד.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <h3>בודקים זמינות</h3>
+        <p>נציג חוזר אליכם ובודק האם קיימת תשתית סיבים בכתובתכם.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <h3>מקבלים פרטי חבילה</h3>
+        <p>אם יש זמינות, תקבלו פרטים מותאמים על אפשרויות החיבור.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">4</div>
+        <h3>מתקדמים לחיבור</h3>
+        <p>בכפוף לאישור והסכמה, מתקדמים לתהליך החיבור בפועל.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main lead form -->
+<section class="sec form-section" id="lead-form">
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>בדקו עכשיו אם יש סיבים בכתובת שלכם</h2>
+      <p>מלאו פרטים ונציג יחזור אליכם לבדיקת זמינות באזור הגולן.</p>
+    </div>
+    <div class="form-wrap reveal">
+      <form id="mainForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="f-name">שם מלא <span class="req">*</span></label>
+            <input type="text" id="f-name" name="name" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="f-phone">טלפון <span class="req">*</span></label>
+            <input type="tel" id="f-phone" name="phone" required autocomplete="tel" />
+          </div>
+          <div class="field">
+            <label for="f-town">יישוב בגולן <span class="req">*</span></label>
+            <input type="text" id="f-town" name="town" required />
+          </div>
+          <div class="field">
+            <label for="f-address">כתובת / הרחבה / שכונה</label>
+            <input type="text" id="f-address" name="address" />
+          </div>
+          <div class="field">
+            <label for="f-has">האם יש כיום אינטרנט בבית?</label>
+            <select id="f-has" name="has-internet">
+              <option value="">בחרו</option>
+              <option value="yes">כן</option>
+              <option value="no">לא</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-use">סוג שימוש</label>
+            <select id="f-use" name="use-type">
+              <option value="">בחרו</option>
+              <option value="home">בית</option>
+              <option value="wfh">עבודה מהבית</option>
+              <option value="business">עסק</option>
+              <option value="zimmer">צימר</option>
+              <option value="other">אחר</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="f-notes">הערות</label>
+            <textarea id="f-notes" name="notes" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="check-row">
+          <input type="checkbox" id="f-consent" name="consent" required />
+          <label for="f-consent">אני מאשר/ת יצירת קשר לצורך בדיקת זמינות והצעת שירות.</label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%"><i data-lucide="send"></i> שלחו לבדיקה</button>
+        <p class="micro">הבדיקה אינה מחייבת. הזמינות משתנה לפי אזור ותשתית.</p>
+      </form>
+      <div class="success-msg" id="mainSuccess" role="status" aria-live="polite">
+        <div class="success-icon"><i data-lucide="check"></i></div>
+        <h3 style="color:var(--teal)">תודה!</h3>
+        <p>הפנייה התקבלה. נציג יחזור אליכם לבדיקת זמינות הסיבים באזורכם.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust -->
+<section class="sec">
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>למה לבחור בטלרן תקשורת?</h2>
+      <p>טלרן תקשורת פועלת בתחום התקשורת, תשתיות וסיבים אופטיים, ומציעה שירות אינטרנט סיבים לקיבוצים ויישובים. בדף זה ניתן להשאיר פרטים לבדיקת זמינות באזור הגולן.</p>
+    </div>
+    <div class="grid grid-4">
+      <article class="card reveal">
+        <div class="icon-wrap"><i data-lucide="cable"></i></div>
+        <h3>התמחות בתשתיות תקשורת</h3>
+        <p>פעילות מקצועית בתחום תשתיות הסיבים והתקשורת.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon-wrap"><i data-lucide="home"></i></div>
+        <h3>פתרונות ליישובים וקיבוצים</h3>
+        <p>היכרות עם הצרכים הייחודיים של יישובים קהילתיים וקיבוצים.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon-wrap"><i data-lucide="search"></i></div>
+        <h3>בדיקה לפי צורך אמיתי</h3>
+        <p>בחינת זמינות לפי יישוב וכתובת ולא הכללות גורפות.</p>
+      </article>
+      <article class="card reveal">
+        <div class="icon-wrap"><i data-lucide="building-2"></i></div>
+        <h3>מענה לבתים ולעסקים</h3>
+        <p>פתרונות לבית הפרטי, לעסק המקומי ולצימר באזור הגולן.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison -->
+<section class="sec mint">
+  <div class="container">
+    <div class="sec-head reveal">
+      <h2>מה ההבדל בין אינטרנט רגיל לסיבים?</h2>
+    </div>
+    <div class="compare reveal">
+      <table class="compare-tbl">
+        <thead>
+          <tr><th>מאפיין</th><th>אינטרנט רגיל</th><th>אינטרנט סיבים</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>יציבות</td><td>עשויה להשתנות לפי תשתית ועומסים</td><td>מיועד לחיבור יציב ומהיר יותר</td></tr>
+          <tr><td>ריבוי מכשירים</td><td>עלול להכביד על הרשת</td><td>מתאים יותר לשימושים מרובים</td></tr>
+          <tr><td>עבודה מהבית</td><td>תלוי באיכות הקו</td><td>מתאים יותר לשיחות וידאו ועבודה בענן</td></tr>
+          <tr><td>עסקים וצימרים</td><td>לא תמיד מספיק</td><td>פתרון רלוונטי לצרכים עסקיים</td></tr>
+          <tr><td>בדיקת זמינות</td><td>לפי ספק ותשתית</td><td>לפי כתובת ותשתית סיבים זמינה</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-note">ההשוואה כללית ואינה מחליפה בדיקת זמינות ותנאי חבילה בפועל.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="container" style="max-width:840px">
+    <div class="sec-head reveal">
+      <h2>שאלות נפוצות</h2>
+    </div>
+    <div class="reveal">
+      <details class="faq"><summary>האם יש זמינות סיבים בכל יישובי הגולן?</summary><div class="faq-body">הזמינות משתנה בין יישוב ליישוב ולעיתים גם בין כתובות באותו יישוב. הדרך לדעת בוודאות היא לבצע בדיקת זמינות ממוקדת לפי הכתובת שלכם.</div></details>
+      <details class="faq"><summary>האם השירות מיועד רק לבתים פרטיים?</summary><div class="faq-body">לא. השירות רלוונטי גם לבתים פרטיים, לעסקים, לצימרים וליישובים וקיבוצים. הצורך והשימוש נבחנים בכל מקרה לגופו.</div></details>
+      <details class="faq"><summary>האם השארת פרטים מחייבת אותי?</summary><div class="faq-body">לא. השארת הפרטים נועדה לבדיקת זמינות בלבד. כל התקדמות נוספת תיעשה בהסכמתכם ובהתאם לתנאי החברה.</div></details>
+      <details class="faq"><summary>כמה זמן לוקח עד שחוזרים אליי?</summary><div class="faq-body">נשתדל לחזור אליכם בהקדם האפשרי בהתאם לסדר הפניות וזמינות הצוות.</div></details>
+      <details class="faq"><summary>האם אפשר לקבל מחיר מראש בדף הזה?</summary><div class="faq-body">בדף זה לא מוצגים מחירים, מהירויות או חבילות ספציפיות. המידע המדויק יימסר לאחר בדיקת הזמינות ובהתאם לכתובת ולצורך שלכם.</div></details>
+      <details class="faq"><summary>מה כדאי להכין לפני שיחה עם נציג?</summary><div class="faq-body">כדאי שיהיו לכם בהישג יד הכתובת המלאה, היישוב, פרטי הקשר ומידע על השימוש המתוכנן (בית, עבודה מהבית, עסק, צימר וכו').</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final">
+  <div class="container">
+    <h2>הגיע הזמן לבדוק אם גם אתם יכולים להתחבר לסיבים</h2>
+    <p>השאירו פרטים ונבדוק עבורכם זמינות אינטרנט סיבים באזור הגולן.</p>
+    <a href="#lead-form" class="btn btn-primary"><i data-lucide="zap"></i> בדיקת זמינות סיבים</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div>
+        <h4>טלרן תקשורת</h4>
+        <p style="color:#cfd9e6">שירות אינטרנט סיבים אופטיים ליישובים, קיבוצים, בתים פרטיים ועסקים באזור הגולן.</p>
+      </div>
+      <div>
+        <h4>יצירת קשר</h4>
+        <a href="tel:*3054"><i data-lucide="headphones" style="vertical-align:middle"></i> *3054 שירות לקוחות</a>
+        <a href="tel:*2063"><i data-lucide="wrench" style="vertical-align:middle"></i> *2063 שירות טכני</a>
+        <a href="https://wa.me/972000000000" target="_blank" rel="noopener"><i data-lucide="message-circle" style="vertical-align:middle"></i> WhatsApp</a>
+      </div>
+      <div>
+        <h4>מידע</h4>
+        <a href="#">מדיניות פרטיות</a>
+        <a href="#">תנאי שימוש</a>
+        <a href="#faq">שאלות נפוצות</a>
+      </div>
+    </div>
+    <div class="legal">המידע בדף זה נועד להשארת פרטים ובדיקת זמינות בלבד. השירות, המחירים, החבילות והחיבור בפועל כפופים לתנאי החברה, זמינות תשתית ובדיקת היתכנות.</div>
+  </div>
+</footer>
+
+<!-- Floating -->
+<div class="floating">
+  <a href="https://wa.me/972000000000" target="_blank" rel="noopener" class="float-btn float-wa" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+  <a href="tel:*3054" class="float-btn float-phone" aria-label="התקשרו *3054"><i data-lucide="phone"></i></a>
+</div>
+
+<div class="mobile-cta">
+  <a href="#lead-form" class="btn btn-primary">בדיקת זמינות עכשיו</a>
+</div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  if (window.lucide) lucide.createIcons();
+
+  // Menu toggle
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('primaryNav');
+  if (menuBtn) {
+    menuBtn.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
+  // Form handler
+  function handleForm(formId, successId) {
+    var form = document.getElementById(formId);
+    var success = document.getElementById(successId);
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      form.style.display = 'none';
+      success.classList.add('show');
+    });
+  }
+  handleForm('miniForm', 'miniSuccess');
+  handleForm('mainForm', 'mainSuccess');
+
+  // Reveal on scroll
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add('in');
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var id = a.getAttribute('href');
+      if (id.length > 1) {
+        var t = document.querySelector(id);
+        if (t) {
+          e.preventDefault();
+          t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          if (nav && nav.classList.contains('open')) nav.classList.remove('open');
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>
